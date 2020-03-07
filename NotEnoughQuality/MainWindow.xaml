@@ -1,0 +1,22 @@
+﻿<Window x:Class="NotEnoughQuality.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NotEnoughQuality"
+        mc:Ignorable="d"
+        Title="NotEnoughQuality" Height="346.271" Width="800" Background="#FF2E2E2E" ResizeMode="CanMinimize">
+    <Grid>
+        <Button x:Name="ButtonStartComparison" Content="Start Comparison" HorizontalAlignment="Left" Margin="629,123,0,0" VerticalAlignment="Top" Width="129" Height="39" Background="#CC6E6E6E" Foreground="WhiteSmoke" Click="ButtonStartComparison_Click"/>
+        <TextBox x:Name="TextBoxReferenceFile" HorizontalAlignment="Left" Height="23" Margin="40,25,0,0" TextWrapping="Wrap" Text=" Input Reference File" VerticalAlignment="Top" Width="577" Background="#CC2C2C2C" Foreground="White"/>
+        <Button x:Name="ButtonOpenFile" Content="Open Reference File" HorizontalAlignment="Left" Margin="631,25,0,0" VerticalAlignment="Top" Width="127" Height="23" Click="Button_Click" Foreground="White" Background="#FF2E2E2E" BorderBrush="#FFC7C7C7"/>
+        <TextBox x:Name="TextBoxDistortedFile" HorizontalAlignment="Left" Height="23" Margin="40,61,0,0" TextWrapping="Wrap" Text=" Input File to Compare" VerticalAlignment="Top" Width="577" Background="#CC2C2C2C" Foreground="White"/>
+        <Button x:Name="ButtonOpenFileToCompare" Content="Open Distorted File" HorizontalAlignment="Left" Margin="631,61,0,0" VerticalAlignment="Top" Width="127" Height="23" Background="#FF2E2E2E" Foreground="White" BorderBrush="#FFC7C7C7" Click="ButtonOpenFileToCompare_Click"/>
+        <TextBox x:Name="TextBoxResWidth" HorizontalAlignment="Left" Height="29" Margin="119,100,0,0" TextWrapping="Wrap" Text="1920" VerticalAlignment="Top" Width="69" Background="#CC2C2C2C" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Video width" HorizontalAlignment="Left" Margin="40,102,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Video height" HorizontalAlignment="Left" Margin="41,134,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="119,134,0,0" TextWrapping="Wrap" Text="1080" VerticalAlignment="Top" Width="69" Background="#CC2C2C2C" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="TextBoxOutput" HorizontalAlignment="Left" Height="105" Margin="41,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="717" Background="#FF272727" Foreground="White" IsReadOnly="True"/>
+
+    </Grid>
+</Window>
