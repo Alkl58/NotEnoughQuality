@@ -17,6 +17,8 @@
         <Label Content="Video height" HorizontalAlignment="Left" Margin="41,134,0,0" VerticalAlignment="Top" Foreground="White"/>
         <TextBox HorizontalAlignment="Left" Height="28" Margin="119,134,0,0" TextWrapping="Wrap" Text="1080" VerticalAlignment="Top" Width="69" Background="#CC2C2C2C" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <TextBox x:Name="TextBoxOutput" HorizontalAlignment="Left" Height="105" Margin="41,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="717" Background="#FF272727" Foreground="White" IsReadOnly="True"/>
+        <Label Content="Color Space" HorizontalAlignment="Left" Margin="222,100,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="TextBoxColorSpace" HorizontalAlignment="Left" Height="29" Margin="300,100,0,0" TextWrapping="Wrap" Text="yuv420p" VerticalAlignment="Top" Width="103" Background="#CC2C2C2C" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
     </Grid>
 </Window>
