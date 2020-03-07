@@ -68,9 +68,9 @@ namespace NotEnoughQuality
 
         public void compare(string RefFile, string Distortedfile, int height, int width, string colorspace)
         {
-            System.Diagnostics.Process process = new System.Diagnostics.Process();
-            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            Process process = new Process();
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
             startInfo.Arguments = "/C ffmpeg.exe -y -i " + '\u0022' + RefFile + '\u0022' + " -pix_fmt "+ colorspace + " -vsync 0 "+ '\u0022'+  RefFile + ".yuv"+ '\u0022';
             process.StartInfo = startInfo;
@@ -78,7 +78,7 @@ namespace NotEnoughQuality
             process.Start();
             process.WaitForExit();
 
-            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
             startInfo.Arguments = "/C ffmpeg.exe -y -i " + '\u0022' + Distortedfile + '\u0022' + " -pix_fmt " + colorspace + " -vsync 0 " + '\u0022' + Distortedfile + ".yuv" + '\u0022';
             process.StartInfo = startInfo;
@@ -87,9 +87,9 @@ namespace NotEnoughQuality
             process.WaitForExit();
 
 
-            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C VMAF\\vmafossexec.exe " + colorspace + " " + width + " " + height + " " + '\u0022' + RefFile + ".yuv" + '\u0022' + " "+ '\u0022' + Distortedfile + ".yuv" + '\u0022' + " VMAF\\model\\vmaf_v0.6.1.pkl --psnr --ssim";
+            startInfo.Arguments = "/C VMAF\\vmafossexec.exe " + colorspace + " " + width + " " + height + " " + '\u0022' + RefFile + ".yuv" + '\u0022' + " "+ '\u0022' + Distortedfile + ".yuv" + '\u0022' + " VMAF\\model\\vmaf_v0.6.1.pkl --ssim --psnr";
             process.StartInfo.RedirectStandardOutput = true;
             process.StartInfo.UseShellExecute = false;
             process.StartInfo = startInfo;
@@ -113,9 +113,7 @@ namespace NotEnoughQuality
                 File.Delete(RefFile + ".yuv");
             }
             catch { }
-            
 
         }
-
     }
 }
